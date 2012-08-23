@@ -1,0 +1,27 @@
+name: Fishing
+main: org.nationcraft.fishing.Main
+version: 0.1 Alpha
+website: http://nationcraft.org
+authors:
+  - aaomidi
+description: >
+ A plugin that causes fishing rods to do damage
+commands:
+  fdset:
+    description: Sets the damage of the Fishing Rod
+    permission: fd.set
+    aliases: [fishingdamage, fishdam]
+    permission-message: You do not have permission to use this command.
+  fdreload:
+    description: Sets the spawn location of the players at bed reset.
+    permission: fd.reload
+    aliases: [fishingdamage, fishdam]
+    permission-message: You do not have permission to use this command.
+
+permissions:
+  bsc.admin:
+    description: The parent permission node for server admins.
+    default: false
+    children:
+      fd.reload: true
+      fd.set: true
